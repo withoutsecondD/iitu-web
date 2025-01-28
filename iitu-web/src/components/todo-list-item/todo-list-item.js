@@ -2,8 +2,14 @@ import React, {Component} from 'react';
 import './todo-list-item.css';
 
 export default class TodoListItem extends Component {
+    state = {
+        done: false
+    };
+
     onLabelClick = () => {
-        console.log(`Done: ${this.props.label}`);
+        this.setState( {
+            done: true
+        })
     };
 
     render() {
